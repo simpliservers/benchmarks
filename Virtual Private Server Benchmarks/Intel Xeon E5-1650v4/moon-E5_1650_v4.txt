@@ -1,0 +1,63 @@
+Plan Specs:
+
+1 vCPU Intel Xeon E5-1650v4 @ 3.60 GHz
+1 GB DDR4 ECC RAM
+10 GBs NVMe SSD Disk
+100 Mbps port
+Gravelines, France, Europe
+
+----------------------
+
+root@benchmarks:~# curl -sL yabs.sh | bash
+# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
+#              Yet-Another-Bench-Script              #
+#                     v2022-02-18                    #
+# https://github.com/masonr/yet-another-bench-script #
+# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
+
+Tue Mar 22 07:34:07 GMT 2022
+
+Basic System Information:
+---------------------------------
+Processor  : QEMU Virtual CPU version 2.5+
+CPU cores  : 1 @ 3600.098 MHz
+AES-NI     : ❌ Disabled
+VM-x/AMD-V : ❌ Disabled
+RAM        : 985.4 MiB
+Swap       : 1024.0 MiB
+Disk       : 8.8 GiB
+
+fio Disk Speed Tests (Mixed R/W 50/50):
+---------------------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 187.98 MB/s  (46.9k) | 464.19 MB/s   (7.2k)
+Write      | 188.48 MB/s  (47.1k) | 466.63 MB/s   (7.2k)
+Total      | 376.47 MB/s  (94.1k) | 930.82 MB/s  (14.5k)
+           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 471.25 MB/s    (920) | 469.15 MB/s    (458)
+Write      | 496.29 MB/s    (969) | 500.40 MB/s    (488)
+Total      | 967.54 MB/s   (1.8k) | 969.55 MB/s    (946)
+
+iperf3 Network Speed Tests (IPv4):
+---------------------------------
+Provider        | Location (Link)           | Send Speed      | Recv Speed     
+                |                           |                 |                
+Clouvider       | London, UK (10G)          | 97.3 Mbits/sec  | 97.3 Mbits/sec 
+Online.net      | Paris, FR (10G)           | 97.3 Mbits/sec  | 97.3 Mbits/sec 
+WorldStream     | The Netherlands (10G)     | 97.2 Mbits/sec  | 97.5 Mbits/sec 
+WebHorizon      | Singapore (400M)          | 87.6 Mbits/sec  | 91.1 Mbits/sec 
+Clouvider       | NYC, NY, US (10G)         | 95.0 Mbits/sec  | 95.3 Mbits/sec 
+Velocity Online | Tallahassee, FL, US (10G) | 91.7 Mbits/sec  | 93.2 Mbits/sec 
+Clouvider       | Los Angeles, CA, US (10G) | 14.1 Mbits/sec  | 89.5 Mbits/sec 
+Iveloz Telecom  | Sao Paulo, BR (2G)        | busy            | 83.7 Mbits/sec  
+
+Geekbench 5 Benchmark Test:
+---------------------------------
+Test            | Value                         
+                |                               
+Single Core     | 821                           
+Multi Core      | 817                           
+Full Test       | https://browser.geekbench.com/v5/cpu/13740687

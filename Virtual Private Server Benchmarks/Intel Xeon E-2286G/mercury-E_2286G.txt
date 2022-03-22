@@ -1,0 +1,63 @@
+Plan Specs:
+
+1 vCPU Intel Xeon E-2286G @ 4.00 GHz
+4 GBs DDR4 ECC RAM
+50 GBs SSD Disk
+up to 1000 Mbps port
+Miami, Florida, United States of America
+
+------------------------------------------------------
+
+root@benchmarks:~# curl -sL yabs.sh | bash
+# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
+#              Yet-Another-Bench-Script              #
+#                     v2022-02-18                    #
+# https://github.com/masonr/yet-another-bench-script #
+# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
+
+Tue Mar 22 07:34:16 GMT 2022
+
+Basic System Information:
+---------------------------------
+Processor  : QEMU Virtual CPU version 2.5+
+CPU cores  : 1 @ 4008.000 MHz
+AES-NI     : ❌ Disabled
+VM-x/AMD-V : ❌ Disabled
+RAM        : 3.9 GiB
+Swap       : 1024.0 MiB
+Disk       : 48.2 GiB
+
+fio Disk Speed Tests (Mixed R/W 50/50):
+---------------------------------
+Block Size | 4k            (IOPS) | 64k           (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 132.40 MB/s  (33.1k) | 187.08 MB/s   (2.9k)
+Write      | 132.75 MB/s  (33.1k) | 188.07 MB/s   (2.9k)
+Total      | 265.15 MB/s  (66.2k) | 375.16 MB/s   (5.8k)
+           |                      |                     
+Block Size | 512k          (IOPS) | 1m            (IOPS)
+  ------   | ---            ----  | ----           ---- 
+Read       | 295.94 MB/s    (578) | 316.18 MB/s    (308)
+Write      | 311.66 MB/s    (608) | 337.23 MB/s    (329)
+Total      | 607.60 MB/s   (1.1k) | 653.41 MB/s    (637)
+
+iperf3 Network Speed Tests (IPv4):
+---------------------------------
+Provider        | Location (Link)           | Send Speed      | Recv Speed     
+                |                           |                 |                
+Clouvider       | London, UK (10G)          | 882 Mbits/sec   | 883 Mbits/sec  
+Online.net      | Paris, FR (10G)           | 864 Mbits/sec   | 877 Mbits/sec  
+WorldStream     | The Netherlands (10G)     | busy            | busy           
+WebHorizon      | Singapore (400M)          | 420 Mbits/sec   | 314 Mbits/sec  
+Clouvider       | NYC, NY, US (10G)         | 932 Mbits/sec   | 931 Mbits/sec  
+Velocity Online | Tallahassee, FL, US (10G) | 928 Mbits/sec   | 923 Mbits/sec  
+Clouvider       | Los Angeles, CA, US (10G) | 826 Mbits/sec   | 906 Mbits/sec  
+Iveloz Telecom  | Sao Paulo, BR (2G)        | 867 Mbits/sec   | 671 Mbits/sec  
+
+Geekbench 5 Benchmark Test:
+---------------------------------
+Test            | Value                         
+                |                               
+Single Core     | 1092                          
+Multi Core      | 1102                          
+Full Test       | https://browser.geekbench.com/v5/cpu/13740639
